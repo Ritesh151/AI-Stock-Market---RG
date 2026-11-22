@@ -1,0 +1,183 @@
+# ==============================================================================
+# Full-Stack AI Stock Market Project - Complete .gitignore
+# Backend: Python / FastAPI / Playwright / Scrapers / ML
+# Frontend: Next.js / React / TypeScript / Tailwind CSS
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment Variables & Secrets (CRITICAL)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+.env*.local
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+
+# Explicitly allow committing example / template env files
+!.env.example
+!.env.*.example
+!frontend/.env.example
+!backend/.env.example
+
+# ------------------------------------------------------------------------------
+# 2. Python & Virtual Environments
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Packaging & Distribution
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ------------------------------------------------------------------------------
+# 3. Node.js & Next.js Frontend
+# ------------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Yarn & PnP
+.pnp
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Next.js Build & Cache
+.next/
+out/
+.vercel/
+
+# TypeScript Cache
+*.tsbuildinfo
+
+# ------------------------------------------------------------------------------
+# 4. Testing, Code Quality & Coverage
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.lcov
+.tox/
+.nox/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+
+# Playwright & End-to-End Testing
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# ------------------------------------------------------------------------------
+# 5. Databases, Local Data & Scraping Profiles
+# ------------------------------------------------------------------------------
+# SQLite & General DBs
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Local data directories
+data/
+backend/data/
+mongodb_data/
+
+# Chrome / Browser Automation User Data & Profiles
+chrome-profile/
+**/chrome-profile/
+user-data-dir/
+browser-profiles/
+auth-session.json
+storage-state.json
+*.har
+
+# ------------------------------------------------------------------------------
+# 6. Large Machine Learning Models & Checkpoints
+# ------------------------------------------------------------------------------
+*.pt
+*.pth
+*.bin
+*.onnx
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+checkpoints/
+
+# ------------------------------------------------------------------------------
+# 7. Logs & Temporary Files
+# ------------------------------------------------------------------------------
+logs/
+*.log
+*.tmp
+*.temp
+
+# ------------------------------------------------------------------------------
+# 8. Operating System & IDE Artifacts
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+
+# Linux
+*~
+.directory
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
