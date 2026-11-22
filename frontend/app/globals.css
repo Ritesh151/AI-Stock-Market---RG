@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium Off-White System Tokens */
+  --bg-main: #F8F8F5;
+  --bg-card: #FFFFFF;
+  --bg-secondary: #F1F2ED;
+  --text-primary: #20251F;
+  --text-secondary: #777D76;
+  --accent-green: #176B45;
+  --positive: #16834A;
+  --negative: #D64A4A;
+  --border-color: #E8EAE4;
+}
+
+@theme {
+  --color-bg-main: #F8F8F5;
+  --color-bg-card: #FFFFFF;
+  --color-bg-secondary: #F1F2ED;
+  --color-text-primary: #20251F;
+  --color-text-secondary: #777D76;
+  --color-accent-green: #176B45;
+  --color-positive: #16834A;
+  --color-negative: #D64A4A;
+  --color-border-subtle: #E8EAE4;
+}
+
+/* Strict Single Off-White Theme - No Dark Mode Overrides */
+html,
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Soft Gradient Illumination Animation */
+@keyframes ambientGlow {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.45;
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.08);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translate(-25px, 25px) scale(0.95);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.45;
+  }
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-ambient-glow {
+  animation: ambientGlow 18s ease-in-out infinite;
+}
+
+.animate-subtle-float {
+  animation: subtleFloat 8s ease-in-out infinite;
+}
+
+/* Custom Subtle Financial Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8EAE4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D5D8CF;
+}
+
+/* Accessibility: Respect Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
